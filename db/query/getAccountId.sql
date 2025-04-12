@@ -1,0 +1,1 @@
+SELECT id FROM bank_accounts WHERE organization_name = ?;

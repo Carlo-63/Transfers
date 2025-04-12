@@ -1,0 +1,23 @@
+{
+    "organization_name": "Org B",
+    "execution_date": "2025-04-5",
+    "description": "Stipendi Aprile 2025",
+    "transfers": [
+        {
+            "employee_id": "EMP001",
+            "name": "Mario Rossi",
+            "iban": "IT60X0542811101000000123456",
+            "amount": 500.49,
+            "note": "Stipendio Aprile 2025",
+            "bic": "MMMIIT00XXX"
+        },
+        {
+            "employee_id": "EMP002",
+            "name": "Laura Bianchi",
+            "iban": "IT60X0542811101000000654321",
+            "amount": 800.11,
+            "note": "Stipendio Aprile 2025 + Bonus",
+            "bic": "MMMIIT00XXX"
+        }
+    ]
+}
