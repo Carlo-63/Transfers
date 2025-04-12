@@ -10,9 +10,9 @@ import (
 type RouteType string
 
 const (
-	// GET  RouteType = "GET"
+	GET  RouteType = "GET"
 	POST RouteType = "POST"
-	// PUT  RouteType = "PUT"
+	PUT  RouteType = "PUT"
 )
 
 type Route struct {
