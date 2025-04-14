@@ -78,7 +78,7 @@ Tutte queste operazioni sono eseguite in una singola transazione, in modo da pot
    - `db/query/insert.sql`
 3. Installa le dipendenze Go:
 `go mod tidy`
-4. Avvia il server
+4. Avvia il server:
 `go run main.go`
 
 ## Note
