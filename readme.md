@@ -70,6 +70,17 @@ L'handler associato alla route `/sendTransfers` gestisce l'intera logica del tra
 
 Tutte queste operazioni sono eseguite in una singola transazione, in modo da poter eseguire un rollback in caso di errori e mantenere la consistenza dei dati.
 
+## Avvio del Progetto
+
+1. Clona il repository
+2. Il db (db/database.db) è già inizializzato, qualora ci fossero problemi è possibile eseguire nuovamente le seguenti query:
+   - `db/query/create.sql`
+   - `db/query/insert.sql`
+3. Installa le dipendenze Go:
+`go mod tidy`
+4. Avvia il server
+`go run main.go`
+
 ## Note
 
 - Il json delle transazioni deve essere passato nel body della richiesta.
