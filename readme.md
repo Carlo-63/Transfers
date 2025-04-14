@@ -85,3 +85,4 @@ Tutte queste operazioni sono eseguite in una singola transazione, in modo da pot
 
 - Il json delle transazioni deve essere passato nel body della richiesta.
 - La sezione "amount" di ogni transfer passato nel body deve essere in Euro, in quanto la conversione in Cents viene gestita internamente.
+- Il programma si avvia sulla porta 8080, è possibile modificarla nel file `main.go`.
