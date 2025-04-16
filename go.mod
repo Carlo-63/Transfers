@@ -1,3 +1,4 @@
+// FIXME: mettiamo un module path migliore. Magari qualcosa pronto per essere usato su GitHub (github.com/Carlo-63/alphabank?
 module test
 
 go 1.24.0

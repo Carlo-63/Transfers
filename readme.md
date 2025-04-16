@@ -54,7 +54,6 @@ Questa route utilizza due middleware principali:
    - Verifica che il saldo dell'account mittente sia sufficiente per eseguire i trasferimenti.
    - Controlla che l'organizzazione specificata esista nel database.
 
-
 ## Handler `/handlers/SendTransfers.go`
 
 L'handler associato alla route `/sendTransfers` gestisce l'intera logica del trasferimento e interagisce con il database tramite tre query principali:
@@ -87,3 +86,17 @@ Tutte queste operazioni sono eseguite in una singola transazione, in modo da pot
 - È presente un json di prova nel file `request.json`.
 - La sezione "amount" di ogni transfer passato nel body deve essere in Euro, in quanto la conversione in Cents viene gestita internamente.
 - Il programma si avvia sulla porta 8080, è possibile modificarla nel file `main.go`.
+
+## Review
+
+1. Farei tutto il repo in inglese: pagina del `readme.md`, nomi dei files, commenti, etc.
+2. Prima cosa da modificare è la naming convention usata. Nomi files, nomi variabili, funzioni, etc. Puoi seguire queste guide che ti consiglio di leggere:
+    1. <https://go.dev/doc/effective_go#names>
+    2. <https://google.github.io/styleguide/go/decisions.html>: qui dentro c'è molto di più. Leggi le cose principali e magari cercati quello su cui sei in dubbio
+3. Se non hai questa estensione per VSCode, te la consiglio: **Gruntfuggly.todo-tree**. Ti sarà utile per trovare i miei commenti nella review
+4. Perchè hai deciso di usare Gin come web framework?
+5. Semplifica dove riesci. Partiamo assodando le cose "base". Poi te la complico all'infinito questa cosa se vuoi. Ma prima sistemiamo le basi.
+6. Leggiti qualcosa sullo standard REST perchè non lo hai seguito:
+    1. <https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/>
+7. La solution non è organizzata benissimo. Nel senso che andrebbe organizzata secondo un approccio Domain-Driven Design (**DDD**). Visto che è un argomento complesso, per ora mi basta che identifichi le entità coinvolte nel programma e mi raggruppi il codice in files. Ogni entità deve avere i suoi file chiamati nello stesso modo sotto ogni package per il momento (e.g. entità **Product**, avrà `hanlders/products.go`, `models/products.go`, etc.)
+8. Non ho ancora runnato l'applicazione in verità. Per ora queste cose sono basate sulla sola lettura del codice scritto. Non è finita qui ovviamente. Questa è solo una prima passata (ci sono altre cose da sistemare e moltissime altre cose che si potranno aggiungere una volta sistemata il tutto.)
