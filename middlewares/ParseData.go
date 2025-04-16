@@ -2,11 +2,13 @@ package middlewares
 
 import (
 	"encoding/json"
+
 	"test/types"
 
 	"github.com/gin-gonic/gin"
 )
 
+// FIXME: nei middlewares va messa la logica da riutilizzare per più endpoint (e.g. logging, authZ, roba sul ctx). Questo parsing va messo nell'handlers HTTP
 func ParseData() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		var transfersData types.TransferData

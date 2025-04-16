@@ -23,6 +23,9 @@ type Route struct {
 }
 
 func SetupRoutes(router *gin.Engine) {
+	// FIXME: perchè ti sei complicato la vita così?
+	// non bastava un "router.POST("/transfers", your handler)"
+	// tutta la logica qui sotto mi sta bene se non usiamo un web framework e quindi dobbiamo scriverci le cose a mano. In ogni caso anche usando la standard library non è necessario fare queste cose.
 	routes := []Route{
 		{
 			addr:        "/sendTransfers",
@@ -50,5 +53,4 @@ func SetupRoutes(router *gin.Engine) {
 			router.PUT(route.addr, handlers...)
 		}
 	}
-
 }

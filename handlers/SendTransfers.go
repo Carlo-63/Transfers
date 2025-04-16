@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"database/sql"
+
 	"test/dbUtils"
 	"test/types"
 
@@ -42,6 +43,7 @@ func SendHandlers(c *gin.Context) {
 		return
 	}
 
+	// FIXME: tornami un qualcosa che mi può identificare la transazione fatta
 	c.JSON(201, gin.H{"success": "Operazione completata con successo"})
 }
 
